@@ -8,25 +8,10 @@ public class ProcessCustomHashMap {
     private final static List<Object> objectList = new ArrayList<>();
 
     public void put(Object k, Object v) {
-        if(objectList.size() == 0){
-            objectList.add(new CustomMap(k,v));
-            return;
-        }
-        String temp = null;
-        List listTemp = (List) objectList.remove(1);
-        for (int i = 1; i < listTemp.size(); i++) {
-            temp = String.valueOf(objectList.get(i));
-            String keyCustom = temp.substring(1, temp.indexOf("="));
-            System.out.println(keyCustom);
-             if (keyCustom.equals(String.valueOf(k))) {
-                objectList.add(new CustomMap(k,v));
-                break;
-            }else {
-                System.out.println("Duplicate Key !!!");
-            }
-        }
 
+        objectList.add(new CustomMap(k, v));
     }
+
 
     public Object print() {
         StringBuilder stringBuilder = new StringBuilder("");
