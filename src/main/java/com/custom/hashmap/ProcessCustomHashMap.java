@@ -8,8 +8,7 @@ public class ProcessCustomHashMap {
     private final static List<Object> objectList = new ArrayList<>();
 
     public void put(Object k, Object v) {
-
-        objectList.add(new CustomMap(k, v));
+        objectList.add(new CustomMap());
     }
 
 
